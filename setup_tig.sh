@@ -314,7 +314,7 @@ generate_docker_compose() {
   cat > docker-compose.yml <<EOF
 services:
   influxdb:
-    image: influxdb:2
+    image: influxdb:latest
     container_name: influxdb
     ports:
       - "8086:8086"
