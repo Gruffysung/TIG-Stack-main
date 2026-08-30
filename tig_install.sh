@@ -318,7 +318,7 @@ EOF
   fi
 
   # โหลดค่าเดิม (ถ้ามี) เพื่อเอามาเป็น default ตอนถาม
-  local envfile=".env.tig"
+  local envfile=".env"
   if [[ -f "$envfile" ]]; then
     # shellcheck disable=SC1090
     source "$envfile" || true
@@ -370,7 +370,7 @@ services:
     ports:
       - "8086:8086"
     env_file:
-      - .env.tig
+      - .env
     environment:
       - INFLUXDB_HTTP_AUTH_ENABLED=true
       - DOCKER_INFLUXDB_INIT_MODE=setup
